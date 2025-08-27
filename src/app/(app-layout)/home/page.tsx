@@ -109,49 +109,45 @@ export default function Home({
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
+        <Card className="p-6 bg-gradient-to-br ">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-blue-600 mb-1">Total Balance</p>
-              <p
-                className={`text-2xl font-semibold ${
-                  totalBalance >= 0 ? 'text-green-600' : 'text-red-600'
-                }`}
-              >
+              <p className="text-sm  mb-1">Total Balance</p>
+              <p className={`text-2xl font-semibold `}>
                 {totalBalance >= 0 ? '+' : ''}${totalBalance.toFixed(2)}
               </p>
             </div>
-            <TrendingUp className="h-8 w-8 text-blue-500" />
+            <TrendingUp className="h-8 w-8" />
           </div>
         </Card>
 
-        <Card className="p-6 bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+        <Card className="p-6 bg-gradient-to-br ">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-green-600 mb-1">Total Expenses</p>
-              <p className="text-2xl font-semibold text-green-700">${totalExpenses.toFixed(2)}</p>
+              <p className="text-sm mb-1">Total Expenses</p>
+              <p className="text-2xl font-semibold ">${totalExpenses.toFixed(2)}</p>
             </div>
-            <DollarSign className="h-8 w-8 text-green-500" />
+            <DollarSign className="h-8 w-8 " />
           </div>
         </Card>
 
-        <Card className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
+        <Card className="p-6 bg-gradient-to-br">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-purple-600 mb-1">Active Groups</p>
-              <p className="text-2xl font-semibold text-purple-700">{groups.length}</p>
+              <p className="text-sm mb-1">Active Groups</p>
+              <p className="text-2xl font-semibold ">{groups.length}</p>
             </div>
-            <Users className="h-8 w-8 text-purple-500" />
+            <Users className="h-8 w-8 " />
           </div>
         </Card>
 
-        <Card className="p-6 bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
+        <Card className="p-6 bg-gradient-to-br ">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-orange-600 mb-1">This Month</p>
-              <p className="text-2xl font-semibold text-orange-700">{expenses.length}</p>
+              <p className="text-sm mb-1">This Month</p>
+              <p className="text-2xl font-semibold">{expenses.length}</p>
             </div>
-            <Clock className="h-8 w-8 text-orange-500" />
+            <Clock className="h-8 w-8 " />
           </div>
         </Card>
       </div>
@@ -253,11 +249,7 @@ export default function Home({
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Your balance</span>
-                  <span
-                    className={`font-medium ${
-                      group.yourBalance >= 0 ? 'text-green-600' : 'text-red-600'
-                    }`}
-                  >
+                  <span className={`font-medium `}>
                     {group.yourBalance >= 0 ? '+' : ''}${group.yourBalance.toFixed(2)}
                   </span>
                 </div>

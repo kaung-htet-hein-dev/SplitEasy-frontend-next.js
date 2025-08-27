@@ -134,49 +134,6 @@ export default function ActivityPage({
 
   return (
     <div className="space-y-6 pb-20 lg:pb-8">
-      {/* Header */}
-      <div>
-        <h1 className="text-2xl font-semibold text-foreground">Activity</h1>
-        <p className="mt-2 text-muted-foreground">View your recent expense activity</p>
-      </div>
-
-      {/* Summary Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm text-blue-600 mb-1">Total expenses</p>
-              <p className="text-2xl font-semibold text-blue-700">{expenses.length}</p>
-            </div>
-            <DollarSign className="h-8 w-8 text-blue-500" />
-          </div>
-        </Card>
-
-        <Card className="p-6 bg-gradient-to-br from-green-50 to-green-100 border-green-200">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm text-green-600 mb-1">You paid</p>
-              <p className="text-2xl font-semibold text-green-700">
-                {expenses.filter(e => e.paidBy === 'You').length}
-              </p>
-            </div>
-            <ArrowUpRight className="h-8 w-8 text-green-500" />
-          </div>
-        </Card>
-
-        <Card className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm text-purple-600 mb-1">You're involved</p>
-              <p className="text-2xl font-semibold text-purple-700">
-                {expenses.filter(e => e.participants.includes('You')).length}
-              </p>
-            </div>
-            <ArrowDownRight className="h-8 w-8 text-purple-500" />
-          </div>
-        </Card>
-      </div>
-
       {/* Tabs */}
       <Tabs value={activeTab} onValueChange={setActiveTab}>
         <TabsList>

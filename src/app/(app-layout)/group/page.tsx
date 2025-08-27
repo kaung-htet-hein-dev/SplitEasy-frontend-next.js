@@ -60,8 +60,8 @@ export default function Groups({ groups = mockGroups, onViewGroup }: GroupsProps
           <Card key={group.id} className="p-6 hover:shadow-md transition-shadow">
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-center space-x-3">
-                <div className="p-3 bg-teal-100 rounded-lg">
-                  <Users className="h-6 w-6 text-teal-600" />
+                <div className="p-3  rounded-lg">
+                  <Users className="h-6 w-6" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">{group.name}</h3>
@@ -79,11 +79,7 @@ export default function Groups({ groups = mockGroups, onViewGroup }: GroupsProps
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-sm text-muted-foreground">Your balance</span>
-                <span
-                  className={`font-medium ${
-                    group.yourBalance >= 0 ? 'text-green-600' : 'text-red-600'
-                  }`}
-                >
+                <span className={`font-medium`}>
                   {group.yourBalance >= 0 ? '+' : ''}${group.yourBalance.toFixed(2)}
                 </span>
               </div>

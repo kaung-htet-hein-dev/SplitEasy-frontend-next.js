@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 export const BottomTab = () => {
   const path = usePathname();
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-card border-t lg:hidden">
+    <div className="fixed bottom-0 left-0 right-0 bg-card border-t lg:hidden bg-tab">
       <div className="grid grid-cols-4 py-2">
         {NAVIGATION_ITEMS.map(item => (
           <Link

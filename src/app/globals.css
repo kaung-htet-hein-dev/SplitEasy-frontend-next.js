@@ -3,10 +3,12 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-:root {
+@theme {
+  --color-tab: #f8fafc;
 }
 
 .dark {
+  --color-tab: #1e293b;
 }
 
 @layer base {

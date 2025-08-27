@@ -12,7 +12,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
       {/* Main content */}
       <div className="lg:pl-64">
         {/* Mobile header */}
-        <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-border bg-card px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:hidden">
+        <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-border bg-card px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:hidden bg-tab">
           <h1 className="text-xl font-semibold text-foreground">SplitEasy</h1>
           <ThemeSwitcher className="ml-auto" />
         </div>
